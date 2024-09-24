@@ -16,8 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from accounts.views import index, signup
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    #path('', Vue, name="index"),
+    path('', index, name='index'),
+    path('signup/', signup, name='signup'),
 ]
