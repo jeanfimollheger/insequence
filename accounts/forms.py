@@ -1,5 +1,6 @@
 from django import forms
 from accounts.models import SiteUser
+
 class SiteUserSignupForm(forms.ModelForm):
   class Meta:
     model = SiteUser

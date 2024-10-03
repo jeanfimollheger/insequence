@@ -1,0 +1,9 @@
+{% extends "base.html" %} {% block content %}
+<h2>S'inscrire</h2>
+
+<form method="POST">
+  {% csrf_token %}
+  <p>{{form.as_p}}</p>
+  <input type="submit" value="Valider" />
+</form>
+{% endblock %}

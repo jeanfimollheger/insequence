@@ -16,10 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from accounts.views import index, signup
+from accounts.views import index, SiteUserCreateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name='index'),
-    path('signup/', signup, name='signup'),
+    path('signup/', SiteUserCreateView.as_view(), name='signup'),
 ]
