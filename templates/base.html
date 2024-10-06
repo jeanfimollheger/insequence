@@ -7,6 +7,14 @@
   </head>
   <body>
     <h1>InSequence...</h1>
+    <a href="{% url 'index' %}">Retour</a>
+    <p>
+      <a href="{% url 'signup' %}">Créer un nouveau compte d'utilisateur</a>
+    </p>
+    <p>
+      <a href="{% url 'siteuser-list' %}">Voir les membres </a>
+    </p>
+
     {% block content%} {% endblock%}
   </body>
 </html>

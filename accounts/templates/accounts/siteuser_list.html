@@ -1,0 +1,7 @@
+{% extends 'base.html' %} {% block content %}<br />
+
+{% for siteuser in siteuser_list %}
+<ul>
+  {{siteuser.username}}
+</ul>
+{% endfor %} {% endblock %}

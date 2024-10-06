@@ -9,8 +9,12 @@ from accounts.forms import SiteUserSignupForm
 def index(request):
   return render(request, 'accounts/index.html')
 
-#def signup(request):
-#  return render(request, 'accounts/signup.html')
+class SiteUserListView(ListView):
+  model = SiteUser
+
+class SiteUserDetailView(DetailView):
+  model = SiteUser
+  success_url = reverse_lazy("siteuser-index")
 
 class SiteUserCreateView(CreateView):
   model = SiteUser
