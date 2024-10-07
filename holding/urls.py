@@ -22,6 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name='index'),
     path('siteuser-list/', SiteUserListView.as_view(), name= 'siteuser-list'),
-    #path('siteuser-detail/', SiteUserDetailView.as_view(), name= 'siteuser-detail'),
+    path('siteuser/<str:slug>/', SiteUserDetailView.as_view(), name= 'siteuser-detail'),
     path('signup/', SiteUserCreateView.as_view(), name='signup'),
 ]
