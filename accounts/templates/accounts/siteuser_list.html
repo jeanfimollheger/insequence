@@ -2,8 +2,9 @@
 
 {% for siteuser in siteuser_list %}
 <ul>
-  <a href="{% url 'siteuser-detail' slug=siteuser.slug %} "
-    >{{siteuser.username}}</a
-  >
+  {{siteuser.username}} /
+  <a href="{% url 'siteuser-detail' slug=siteuser.slug %} ">Détail</a>
+  /
+  <a href="{% url 'siteuser-update' slug=siteuser.slug %}">Modifier</a>
 </ul>
 {% endfor %} {% endblock %}
