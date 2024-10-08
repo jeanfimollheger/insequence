@@ -6,5 +6,7 @@
   <a href="{% url 'siteuser-detail' slug=siteuser.slug %} ">Détail</a>
   /
   <a href="{% url 'siteuser-update' slug=siteuser.slug %}">Modifier</a>
+  /
+  <a href="{% url 'siteuser-delete' slug=siteuser.slug %}">Supprimer</a>
 </ul>
 {% endfor %} {% endblock %}

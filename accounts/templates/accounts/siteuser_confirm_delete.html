@@ -1,0 +1,9 @@
+{% extends 'base.html' %} {% block content %}<br />
+
+<form method="POST">
+  {% csrf_token %}
+  <p>Voulez-vous réellement supprimer {{siteuser.pseudo}} ?</p>
+  <input type="submit" value="Supprimer définitivement" />
+</form>
+
+{% endblock %}

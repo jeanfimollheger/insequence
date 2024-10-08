@@ -1,5 +1,6 @@
 {% extends 'base.html' %} {% block content %}<br />
 
+<a href="{% url 'siteuser-delete' slug=siteuser.slug %}">Supprimer ce membre</a>
 <p>{{ siteuser.username}}</p>
 <p>{{ siteuser.first_name}}</p>
 <p>{{ siteuser.last_name}}</p>

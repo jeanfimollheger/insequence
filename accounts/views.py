@@ -27,6 +27,10 @@ class SiteUserUpdateView(UpdateView):
   model = SiteUser
   form_class = SiteUserUpdateForm
   success_url = reverse_lazy("siteuser-list")
+
+class SiteUserDeleteView(DeleteView):
+  model = SiteUser
+  success_url = reverse_lazy("siteuser-list")
   
 
-  
+
